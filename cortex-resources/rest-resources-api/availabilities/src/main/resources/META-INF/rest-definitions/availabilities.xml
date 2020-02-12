@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+
+	<family>
+		<name>availabilities</name>
+		<description>
+			<![CDATA[
+Display the [item](items.md) and line item's availability. The availability identifies the item's
+purchasability. For example, in Elastic Path Commerce Engine the following states are available:
+
+* `ALWAYS`
+* `NOT_AVAILABLE`
+* `AVAILABLE_FOR_BACK_ORDER`
+* `AVAILABLE_FOR_PRE_ORDER`
+			]]>
+		</description>
+
+		<resource>
+			<name>availability-for-item</name>
+			<description><![CDATA[The item's availability. The availability identifies the item's purchasability.]]></description>
+			<uri>{base.family}/{items.item}</uri>
+			<entity>availability</entity>
+		</resource>
+
+		<resource>
+			<name>availability-for-offer</name>
+			<description>
+				<![CDATA[The offer's availability. The availability defines the offer's purchasability]]>
+			</description>
+			<uri>{base.family}/{offers.offer}</uri>
+			<entity>availability</entity>
+		</resource>
+
+		<resource>
+			<name>availability-for-cart-line-item</name>
+			<description>
+				<![CDATA[The line item's availability. The availability identifies the purchasability of the item(s) in the line item.]]></description>
+			<uri>{base.family}/{carts.line-item}</uri>
+			<entity>availability</entity>
+		</resource>
+
+		<relationship>
+			<name>cart-line-item-to-availability</name>
+			<description>
+				<![CDATA[Read a line item's availability. The availability rule identifies the purchasable state of the item(s) in the line item.]]>
+			</description>
+			<rel>availability</rel>
+			<rev>lineitem</rev>
+			<from>carts.line-item</from>
+			<to>availability-for-cart-line-item</to>
+		</relationship>
+
+		<relationship>
+			<name>item-to-availability</name>
+			<description><![CDATA[Read an item's availability. The availability rule identifies the item's purchasability.]]></description>
+			<rel>availability</rel>
+			<rev>item</rev>
+			<from>items.item</from>
+			<to>availability-for-item</to>
+		</relationship>
+
+		<relationship>
+			<name>offer-to-availability</name>
+			<description><![CDATA[Read an offer's availability. The availability rule identifies the offer's purchasability.]]></description>
+			<rel>availability</rel>
+			<rev>offer</rev>
+			<from>offers.offer</from>
+			<to>availability-for-offer</to>
+		</relationship>
+
+		<entity>
+			<name>availability</name>
+			<description><![CDATA[The availability information for an item.]]></description>
+			<property>
+				<name>state</name>
+				<description>
+					<![CDATA[
+The state of availability for an item or line item. In Elastic Path Commerce Engine, the states are: `AVAILABLE`, `NOT_AVAILABLE`, `AVAILABLE_FOR_BACK_ORDER`, `AVAILABLE_FOR_PRE_ORDER`
+					]]>
+				</description>
+				<string/>
+			</property>
+			<property>
+				<name>release-date</name>
+				<description>
+					<![CDATA[
+Optional property. This is the date the item becomes available for purchase. In Elastic Path Commerce Engine, `release-date` is only visible when the item is available for pre-order.
+					]]>
+				</description>
+				<is-a>base.date</is-a>
+			</property>
+			<entity-type>availabilities.availability</entity-type>
+		</entity>
+
+	</family>
+</definitions>

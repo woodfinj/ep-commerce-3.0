@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+	<family>
+		<name>purchases</name>
+
+		<resource>
+			<name>create-purchase-form</name>
+			<description><![CDATA[Provides the form with which to purchase an order.]]></description>
+			<uri>{base.family}/{orders.order}/form</uri>
+			<form>
+				<entity>purchase-form</entity>
+				<action-rel>submitorderaction</action-rel>
+				<result>purchase</result>
+			</form>
+		</resource>
+
+		<relationship>
+			<name>create-purchase-form-from-order</name>
+			<description><![CDATA[Retrieve the form.]]></description>
+			<rel>purchaseform</rel>
+			<from>orders.order</from>
+			<to>create-purchase-form</to>
+		</relationship>
+
+		<entity>
+			<name>purchase-form</name>
+			<description>Data needed for completing a purchase. Typically nothing should be needed at this stage as all required information has been provided while resolving any blocking advisors.</description>
+		</entity>
+	</family>
+</definitions>

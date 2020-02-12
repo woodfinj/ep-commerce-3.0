@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+
+	<family>
+		<name>orders</name>
+
+		<resource>
+			<name>billingaddress-info</name>
+			<description><![CDATA[The billing address info associated with an order.]]></description>
+			<uri>{order}/billingaddressinfo</uri>
+			<entity>controls.info</entity>
+		</resource>
+
+		<relationship>
+			<name>order-to-billingaddress</name>
+			<description><![CDATA[Read order from cart.]]></description>
+			<rel>billingaddressinfo</rel>
+			<rev>order</rev>
+			<from>order</from>
+			<to>billingaddress-info</to>
+		</relationship>
+
+		<relationship>
+			<name>billing-address-info-to-billing-address</name>
+			<description><![CDATA[Read billing address from billing address info.]]></description>
+			<rel>billingaddress</rel>
+			<from>billingaddress-info</from>
+			<to>addresses.address</to>
+		</relationship>
+
+	</family>
+</definitions>

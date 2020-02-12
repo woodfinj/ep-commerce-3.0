@@ -1,0 +1,8 @@
+<aspectj>
+	<!-- -debug for more detailed info -->
+	<weaver options="-verbose -showWeaveInfo"/>
+	<aspects>
+		<aspect name="com.elasticpath.rest.resource.integration.epcommerce.repository.CacheRemoveAspect" />
+		<aspect name="com.elasticpath.rest.resource.integration.epcommerce.repository.CacheResultAspect" />
+	</aspects>
+</aspectj>

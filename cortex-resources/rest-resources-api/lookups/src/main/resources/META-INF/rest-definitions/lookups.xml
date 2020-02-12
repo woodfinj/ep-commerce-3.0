@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+
+	<family>
+		<name>lookups</name>
+		<description>
+			<![CDATA[A lookup is a means of looking up an [item](items.md), [navigation node](navigations.md) or [purchase](purchases.md).]]>
+		</description>
+
+		<resource>
+			<name>lookups</name>
+			<description><![CDATA[All the top level lookups for a store.]]></description>
+			<uri>{base.family}/{base.scope}</uri>
+		</resource>
+
+		<relationship>
+			<name>root-to-lookups</name>
+			<description>Link from root to lookups.</description>
+			<rel>lookups</rel>
+			<from>base.root</from>
+			<to>lookups</to>
+		</relationship>
+	</family>
+
+</definitions>

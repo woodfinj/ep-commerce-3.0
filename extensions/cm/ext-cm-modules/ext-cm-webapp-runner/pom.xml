@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.elasticpath.extensions.cm</groupId>
+		<artifactId>ext-cm-modules</artifactId>
+		<version>0.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>ext-cm-webapp-runner</artifactId>
+	<packaging>war</packaging>
+
+	<name>Extension CM Web App Runner</name>
+	<description>Runs the Commerce Manager Webapp  in a non-tycho reactor (enabling tomcat*:run-war for example)</description>
+
+	<properties>
+		<skipTests>true</skipTests>
+		<ep.database.timezone>UTC</ep.database.timezone>
+		<contextFile>${project.build.directory}/${build.finalName}/META-INF/context.xml</contextFile>
+		<epdb.jdbc.properties>serverTimezone=${ep.database.timezone};useLegacyDatetimeCode=false</epdb.jdbc.properties>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.elasticpath.extensions.cm</groupId>
+									<artifactId>ext-cm-webapp</artifactId>
+									<version>${project.version}</version>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}</outputDirectory>
+									<includes>**</includes>
+									<type>war</type>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat8-maven-plugin</artifactId>
+				<configuration>
+					<path>${ep.cm.context}</path>
+					<port>${ep.cm.tomcat.port.http}</port>
+					<contextFile>${cm.contextFilePath}</contextFile>
+					<systemProperties>
+						<ep.changesets.enabled>${ep.changesets.enabled}</ep.changesets.enabled>
+						<ep.search.default.url>${ep.search.url}</ep.search.default.url>
+						<ep.asset.location>${ep.local.asset.path}</ep.asset.location>
+						<ep.smtp.scheme>${ep.smtp.scheme}</ep.smtp.scheme>
+						<ep.smtp.host>${ep.smtp.host}</ep.smtp.host>
+						<ep.smtp.port>${ep.smtp.port}</ep.smtp.port>
+						<ep.smtp.username>${ep.smtp.username}</ep.smtp.username>
+						<ep.smtp.password>${ep.smtp.password}</ep.smtp.password>
+						<epdb.username>${epdb.username}</epdb.username>
+						<epdb.password>${epdb.password}</epdb.password>
+						<epdb.jdbc.driver>${epdb.jdbc.driver}</epdb.jdbc.driver>
+						<epdb.data.source.factory>${epdb.data.source.factory}</epdb.data.source.factory>
+						<epdb.url>${epdb.url}</epdb.url>
+						<epdb.data.source.type>${epdb.data.source.type}</epdb.data.source.type>
+						<epdb.data.source.xa.factory>${epdb.data.source.xa.factory}</epdb.data.source.xa.factory>
+						<epdb.data.source.xa.type>${epdb.data.source.xa.type}</epdb.data.source.xa.type>
+						<epdb.validation.query>${epdb.validation.query}</epdb.validation.query>
+						<epdb.validation.interval>${epdb.validation.interval}</epdb.validation.interval>
+						<ep.tomcat.maxcachesize>${ep.tomcat.maxcachesize}</ep.tomcat.maxcachesize>
+						<ep.jms.factory>${ep.jms.factory}</ep.jms.factory>
+						<ep.jms.type>${ep.jms.type}</ep.jms.type>
+						<ep.jms.url>${ep.jms.url}</ep.jms.url>
+						<ep.jms.xa.factory>${ep.jms.xa.factory}</ep.jms.xa.factory>
+						<ep.jms.xa.type>${ep.jms.xa.type}</ep.jms.xa.type>
+
+					</systemProperties>
+				</configuration>
+				<dependencies>
+					<!-- Include JDBC driver dependency -->
+					<dependency>
+						<groupId>${epdb.maven.groupId}</groupId>
+						<artifactId>${epdb.maven.artifactId}</artifactId>
+						<version>${epdb.maven.version}</version>
+					</dependency>
+					<!-- Include Active MQ dependencies -->
+					<dependency>
+						<groupId>org.apache.activemq</groupId>
+						<artifactId>activemq-pool</artifactId>
+						<version>${org.apache.activemq.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.activemq</groupId>
+						<artifactId>activemq-jms-pool</artifactId>
+						<version>${org.apache.activemq.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.activemq</groupId>
+						<artifactId>activemq-client</artifactId>
+						<version>${org.apache.activemq.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.activemq</groupId>
+						<artifactId>activemq-client</artifactId>
+						<version>${org.apache.activemq.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.commons</groupId>
+						<artifactId>commons-pool2</artifactId>
+						<version>2.4.2</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.geronimo.specs</groupId>
+						<artifactId>geronimo-j2ee-management_1.1_spec</artifactId>
+						<version>${org.apache.geronimo.management.spec.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.fusesource.hawtbuf</groupId>
+						<artifactId>hawtbuf</artifactId>
+						<version>1.9</version>
+					</dependency>
+					<dependency>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-api</artifactId>
+						<version>1.6.6</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.elasticpath.extensions.cm</groupId>
+			<artifactId>ext-cm-libs</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.elasticpath.extensions.cm</groupId>
+			<artifactId>ext-cm-webapp</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
+

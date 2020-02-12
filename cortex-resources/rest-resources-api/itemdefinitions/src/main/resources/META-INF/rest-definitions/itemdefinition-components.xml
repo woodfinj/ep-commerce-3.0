@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+
+	<family>
+		<name>itemdefinitions</name>
+
+		<uri-part>
+			<name>component-id</name>
+			<description><![CDATA[The component ID.]]></description>
+			<path/>
+		</uri-part>
+
+		<relationship>
+			<name>components-for-item-definition</name>
+			<description><![CDATA[Read the item definition component from the list of available components.]]></description>
+			<rel>components</rel>
+			<rev>definition</rev>
+			<from>item-definition</from>
+			<to>item-definition-components</to>
+		</relationship>
+
+		<resource>
+			<name>item-definition-components</name>
+			<description><![CDATA[The list of item definition components.]]></description>
+			<uri>{item-definition}/components</uri>
+			<list-of>item-definition-component</list-of>
+		</resource>
+
+		<resource>
+			<name>item-definition-component</name>
+			<description><![CDATA[The item definition component.]]></description>
+			<uri>{item-definition-components}/{component-id}</uri>
+			<entity>item-definition-component</entity>
+		</resource>
+
+		<relationship>
+			<name>item-definition-components-for-item-definition-component</name>
+			<description><![CDATA[The list of components the component is in.]]></description>
+			<rel>list</rel>
+			<from>item-definition-component</from>
+			<to>item-definition-components</to>
+		</relationship>
+
+		<relationship>
+			<name>standalone-item-for-item-definition-component</name>
+			<description><![CDATA[Read the component's stand alone item. Some components can be
+			purchased separately.]]></description>
+			<rel>standaloneitem</rel>
+			<from>item-definition-component</from>
+			<to>items.item</to>
+		</relationship>
+
+		<relationship>
+			<name>options-for-item-definition-component</name>
+			<description><![CDATA[Read the options for an item definition component.]]></description>
+			<rel>options</rel>
+			<rev>definition</rev>
+			<from>item-definition-component</from>
+			<to>item-definition-component-options</to>
+		</relationship>
+
+		<resource>
+			<name>item-definition-component-options</name>
+			<description><![CDATA[An item definition component's options.]]></description>
+			<uri>{item-definition-component}/options</uri>
+			<list-of>item-definition-component-option</list-of>
+		</resource>
+
+		<resource>
+			<name>item-definition-component-option</name>
+			<description><![CDATA[An item definition component option.]]></description>
+			<uri>{item-definition-component-options}/{option-id}</uri>
+			<entity>item-definition-option</entity>
+		</resource>
+
+		<relationship>
+			<name>item-definition-component-options-for-component-option</name>
+			<description><![CDATA[The list of component options list the option is in.]]></description>
+			<rel>list</rel>
+			<from>item-definition-component-option</from>
+			<to>item-definition-component-options</to>
+		</relationship>
+
+		<relationship>
+			<name>value-for-item-definition-component-option</name>
+			<description><![CDATA[Read the item definition component option value.]]></description>
+			<rel>value</rel>
+			<rev>option</rev>
+			<from>item-definition-component-option</from>
+			<to>item-definition-component-option-value</to>
+		</relationship>
+
+		<resource>
+			<name>item-definition-component-option-value</name>
+			<description><![CDATA[The item definition component's option value.]]></description>
+			<uri>{item-definition-component-option}/values/{option-value-id}</uri>
+			<entity>item-definition-option-value</entity>
+		</resource>
+
+		<relationship>
+			<name>item-definition-nested-components-for-item-definition-component</name>
+			<description><![CDATA[Read the components for this component.]]></description>
+			<rel>components</rel>
+			<rev>definition</rev>
+			<from>item-definition-component</from>
+			<to>item-definition-nested-components</to>
+		</relationship>
+
+		<resource>
+			<name>item-definition-nested-components</name>
+			<description><![CDATA[The nested item definition components.]]></description>
+			<uri>{item-definition-component}/components</uri>
+			<list-of>item-definition-component</list-of>
+		</resource>
+
+		<relationship>
+			<name>parent-nested-components-for-item-definition-component</name>
+			<description><![CDATA[The list of components the component is in.]]></description>
+			<rel>list</rel>
+			<from>item-definition-component</from>
+			<to>item-definition-nested-components</to>
+		</relationship>
+
+		<entity>
+			<name>item-definition-component</name>
+			<description><![CDATA[The item definition component.]]></description>
+			<property>
+				<name>item-id</name>
+				<description><![CDATA[The internal item identifier.]]></description>
+				<internal/>
+				<string/>
+			</property>
+			<property>
+				<name>display-name</name>
+				<description><![CDATA[The localized name of the item definition component, intended for display in the client application.]]></description>
+				<string/>
+			</property>
+			<property>
+				<name>details</name>
+				<description><![CDATA[The details of the item definition component.]]></description>
+				<array>
+					<is-a>base.details</is-a>
+				</array>
+			</property>
+			<property>
+				<name>quantity</name>
+				<description><![CDATA[The quantity of components.]]></description>
+				<integer/>
+			</property>
+			<property>
+				<name>component-id</name>
+				<description><![CDATA[The internal component identifier.]]></description>
+				<internal/>
+				<string/>
+			</property>
+			<property>
+				<name>standalone-item-id</name>
+				<description><![CDATA[The internal stand alone item identifier.]]></description>
+				<internal/>
+				<string/>
+			</property>
+			<entity-type>itemdefinitions.item-definition-component</entity-type>
+		</entity>
+
+	</family>
+</definitions>

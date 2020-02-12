@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogs>
+	<catalog>
+		<code>Master_B</code>
+		<type>master</type>
+		<name>Master Catalog B</name>
+		<languages>
+			<language>es</language>
+			<language>es_MX</language>
+			<language>fr</language>
+			<language>en</language>
+		</languages>
+		<defaultlanguage>en</defaultlanguage>
+
+		<attributes>
+			<attribute>
+				<key>Attribute_1</key>
+				<name>
+					<value language="en">Attribute 1</value>
+				</name>
+				<usage>Product</usage>
+				<type>ShortText</type>
+				<multilanguage>true</multilanguage>
+				<required>false</required>
+				<multivalue>false</multivalue>
+				<global>false</global>
+			</attribute>
+			<attribute>
+				<key>Attribute_2</key>
+				<name>
+					<value language="en">Attribute 2</value>
+				</name>
+				<usage>Product</usage>
+				<type>ShortText</type>
+				<multilanguage>true</multilanguage>
+				<required>false</required>
+				<multivalue>false</multivalue>
+				<global>false</global>
+			</attribute>
+			<attribute>
+				<key>features</key>
+				<name>
+					<value language="en">Features</value>
+				</name>
+				<usage>Product</usage>
+				<type>LongText</type>
+				<multilanguage>true</multilanguage>
+				<required>false</required>
+				<multivalue>false</multivalue>
+				<global>true</global>
+			</attribute>
+		</attributes>
+		<categorytypes>
+			<categorytype>
+				<guid>87bd3743-436c-4fd4-871b-799fde035d14</guid>
+				<name>Category_Type</name>
+				<assignedattributes/>
+			</categorytype>
+		</categorytypes>
+		<producttypes>
+			<producttype>
+				<guid>d5e3dfbe-106a-4011-b149-f4bf29de0457</guid>
+				<name>Config_Prod_Type</name>
+				<assignedattributes>
+					<attributekey>features</attributekey>
+				</assignedattributes>
+				<defaulttaxcode>GOODS</defaulttaxcode>
+				<multisku>
+					<assignedskuoptions/>
+					<assignedattributes/>
+				</multisku>
+				<nodiscount>false</nodiscount>
+				<assignedcartitemmodifiergroups>
+					<code>Conf_Group_allFields</code>
+				</assignedcartitemmodifiergroups>
+			</producttype>
+			<producttype>
+				<guid>4dba313e-9556-4262-b5fa-8238ed726564</guid>
+				<name>Special_Products</name>
+				<assignedattributes>
+					<attributekey>Attribute_1</attributekey>
+					<attributekey>Attribute_2</attributekey>
+				</assignedattributes>
+				<defaulttaxcode>DIGITAL</defaulttaxcode>
+				<nodiscount>false</nodiscount>
+			</producttype>
+			<producttype>
+				<guid>0123962b-e4e8-45bf-871a-e90ab692ac0a</guid>
+				<name>Non_Promotable</name>
+				<assignedattributes/>
+				<defaulttaxcode>DIGITAL</defaulttaxcode>
+				<nodiscount>true</nodiscount>
+			</producttype>
+		</producttypes>
+		<brands>
+			<brand>
+				<code>Gen_Brand</code>
+				<name>
+					<value language="es"/>
+					<value language="es_MX"/>
+					<value language="fr"/>
+					<value language="en">Generic Brand</value>
+				</name>
+			</brand>
+		</brands>
+	</catalog>
+
+	<catalog>
+		<code>Master_A</code>
+		<type>master</type>
+		<name>Master Catalog A</name>
+		<languages>
+			<language>es</language>
+			<language>es_MX</language>
+			<language>fr</language>
+			<language>en</language>
+		</languages>
+		<defaultlanguage>en</defaultlanguage>
+		<categorytypes>
+			<categorytype>
+				<guid>e87d7b70-2263-4cfd-863c-fcfc19d91c9a</guid>
+				<name>Cat_Type</name>
+				<assignedattributes>
+					<attributekey>catName</attributekey>
+				</assignedattributes>
+			</categorytype>
+		</categorytypes>
+		<producttypes>
+			<producttype>
+				<guid>c5427e2a-3b10-4de9-9b11-e6e41775e2b7</guid>
+				<name>Single_SKU</name>
+				<assignedattributes>
+					<attributekey>features</attributekey>
+				</assignedattributes>
+				<defaulttaxcode>GOODS</defaulttaxcode>
+				<nodiscount>false</nodiscount>
+			</producttype>
+			<producttype>
+				<guid>e4a8d446-4fd8-4d7d-9872-191116ba1a98</guid>
+				<name>Multi_SKU</name>
+				<assignedattributes>
+					<attributekey>features</attributekey>
+				</assignedattributes>
+				<defaulttaxcode>GOODS</defaulttaxcode>
+				<multisku>
+					<assignedskuoptions>
+						<skuoption>SKU_Option1</skuoption>
+					</assignedskuoptions>
+					<assignedattributes/>
+				</multisku>
+				<nodiscount>false</nodiscount>
+			</producttype>
+		</producttypes>
+		<skuoptions>
+			<skuoption>
+				<code>SKU_Option1</code>
+				<name>
+					<value language="es"/>
+					<value language="es_MX"/>
+					<value language="fr"/>
+					<value language="en">SKU Option</value>
+				</name>
+				<skuoptionvalues>
+					<skuoptionvalue>
+						<code>Op1_Value1</code>
+						<name>
+							<value language="es"/>
+							<value language="es_MX"/>
+							<value language="fr"/>
+							<value language="en">Value 1</value>
+						</name>
+						<ordering>10</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>Op1_Value4</code>
+						<name>
+							<value language="es"/>
+							<value language="es_MX"/>
+							<value language="fr"/>
+							<value language="en">Value 4</value>
+						</name>
+						<ordering>40</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>Op1_Value2</code>
+						<name>
+							<value language="es"/>
+							<value language="es_MX"/>
+							<value language="fr"/>
+							<value language="en">Value 2</value>
+						</name>
+						<ordering>20</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>Op1_Value3</code>
+						<name>
+							<value language="es"/>
+							<value language="es_MX"/>
+							<value language="fr"/>
+							<value language="en">Value 3</value>
+						</name>
+						<ordering>30</ordering>
+					</skuoptionvalue>
+				</skuoptionvalues>
+			</skuoption>
+		</skuoptions>
+		<brands>
+			<brand>
+				<code>Generic_Brand</code>
+				<name>
+					<value language="es"/>
+					<value language="es_MX"/>
+					<value language="fr"/>
+					<value language="en">Generic Brand</value>
+				</name>
+			</brand>
+		</brands>
+	</catalog>
+
+	<catalog>
+		<code>Mobile</code>
+		<type>virtual</type>
+		<name>Mobile Virtual Catalog</name>
+		<defaultlanguage>en</defaultlanguage>
+	</catalog>
+
+	<catalog>
+		<code>MobileCatalog</code>
+		<type>master</type>
+		<name>Mobile Catalog</name>
+		<languages>
+			<language>fr_CA</language>
+			<language>fr</language>
+			<language>en</language>
+			<language>en_US</language>
+		</languages>
+		<defaultlanguage>en</defaultlanguage>
+
+		<attributes>
+			<attribute>
+				<key>description</key>
+				<name>
+					<value language="en">Product Description</value>
+				</name>
+				<usage>Product</usage>
+				<type>LongText</type>
+				<multilanguage>true</multilanguage>
+				<required>false</required>
+				<multivalue>false</multivalue>
+				<global>false</global>
+			</attribute>
+			<attribute>
+				<key>features</key>
+				<name>
+					<value language="en">Features</value>
+				</name>
+				<usage>Product</usage>
+				<type>LongText</type>
+				<multilanguage>true</multilanguage>
+				<required>false</required>
+				<multivalue>false</multivalue>
+				<global>true</global>
+			</attribute>
+			<attribute>
+				<key>catImage</key>
+				<name>
+					<value language="en">Category Image</value>
+				</name>
+				<usage>Category</usage>
+				<type>Image</type>
+				<multilanguage>false</multilanguage>
+				<required>false</required>
+				<multivalue>false</multivalue>
+				<global>true</global>
+			</attribute>
+			<attribute>
+				<key>catName</key>
+				<name>
+					<value language="en">Name</value>
+				</name>
+				<usage>Category</usage>
+				<type>ShortText</type>
+				<multilanguage>true</multilanguage>
+				<required>true</required>
+				<multivalue>false</multivalue>
+				<global>true</global>
+			</attribute>
+			<attribute>
+				<key>catDescription</key>
+				<name>
+					<value language="en">Category Description</value>
+				</name>
+				<usage>Category</usage>
+				<type>LongText</type>
+				<multilanguage>false</multilanguage>
+				<required>true</required>
+				<multivalue>false</multivalue>
+				<global>true</global>
+			</attribute>
+		</attributes>
+		<categorytypes>
+			<categorytype>
+				<guid>7254f0b3-1808-4f10-b955-4a4ee72c59fc</guid>
+				<name>GiftCertificate</name>
+				<assignedattributes>
+					<attributekey>catDescription</attributekey>
+					<attributekey>catImage</attributekey>
+				</assignedattributes>
+			</categorytype>
+		</categorytypes>
+		<producttypes>
+			<producttype>
+				<guid>4fe9e351-b5ce-4dbd-a47a-ee2ceb2d6e2b</guid>
+				<name>Gift Certificate</name>
+				<assignedattributes>
+					<attributekey>description</attributekey>
+				</assignedattributes>
+				<defaulttaxcode>NONE</defaulttaxcode>
+				<multisku>
+					<assignedskuoptions>
+						<skuoption>GC_Denominations</skuoption>
+						<skuoption>GC_Themes</skuoption>
+					</assignedskuoptions>
+					<assignedattributes/>
+				</multisku>
+				<nodiscount>true</nodiscount>
+				<assignedcartitemmodifiergroups>
+					<code>giftCertificate_mobee</code>
+				</assignedcartitemmodifiergroups>
+			</producttype>
+		</producttypes>
+		<skuoptions>
+			<skuoption>
+				<code>GC_Denominations</code>
+				<name>
+					<value language="fr_CA"/>
+					<value language="fr"/>
+					<value language="en">Amount</value>
+					<value language="en_US">Amount</value>
+				</name>
+				<skuoptionvalues>
+					<skuoptionvalue>
+						<code>ONE_HUNDRED_VALUE</code>
+						<name>
+							<value language="fr_CA"/>
+							<value language="fr"/>
+							<value language="en">100</value>
+							<value language="en_US">100</value>
+						</name>
+						<ordering>30</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>FIFTY_VALUE</code>
+						<name>
+							<value language="fr_CA"/>
+							<value language="fr"/>
+							<value language="en">50</value>
+							<value language="en_US">50</value>
+						</name>
+						<ordering>20</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>TWENTY_VALUE</code>
+						<name>
+							<value language="fr_CA"/>
+							<value language="fr"/>
+							<value language="en">20</value>
+							<value language="en_US">20</value>
+						</name>
+						<ordering>10</ordering>
+					</skuoptionvalue>
+				</skuoptionvalues>
+			</skuoption>
+			<skuoption>
+				<code>GC_Themes</code>
+				<name>
+					<value language="fr_CA"/>
+					<value language="fr"/>
+					<value language="en">Design</value>
+					<value language="en_US">Design</value>
+				</name>
+				<skuoptionvalues>
+					<skuoptionvalue>
+						<code>berries_theme</code>
+						<name>
+							<value language="fr_CA"/>
+							<value language="fr"/>
+							<value language="en">Berries</value>
+							<value language="en_US">Berries</value>
+						</name>
+						<ordering>10</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>hummingbird_theme</code>
+						<name>
+							<value language="fr_CA"/>
+							<value language="fr"/>
+							<value language="en">Hummingbird</value>
+							<value language="en_US">Hummingbird</value>
+						</name>
+						<ordering>20</ordering>
+					</skuoptionvalue>
+				</skuoptionvalues>
+			</skuoption>
+		</skuoptions>
+		<brands>
+			<brand>
+				<code>None</code>
+				<name>
+					<value language="fr_CA"/>
+					<value language="fr"/>
+					<value language="en">none</value>
+					<value language="en_US">none</value>
+				</name>
+			</brand>
+		</brands>
+	</catalog>
+
+	<catalog>
+		<code>Virtual_CatAB_SP</code>
+		<type>virtual</type>
+		<name>Virtual CatAB Spanish</name>
+		<defaultlanguage>es</defaultlanguage>
+	</catalog>
+</catalogs>

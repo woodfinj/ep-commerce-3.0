@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+
+	<family>
+		<name>itemselections</name>
+
+		<uri-part>
+			<name>option-id</name>
+			<description><![CDATA[The option ID.]]></description>
+			<string/>
+		</uri-part>
+
+		<uri-part>
+			<name>option-value-id</name>
+			<description><![CDATA[The option value ID.]]></description>
+			<string/>
+		</uri-part>
+
+		<resource>
+			<name>item-option-selector</name>
+			<description><![CDATA[Selector to select an item definition option's value.]]></description>
+			<uri>{base.family}/{base.scope}/{items.item-id}/options/{option-id}/selector</uri>
+			<selector-for>itemdefinitions.item-definition-option</selector-for>
+		</resource>
+
+		<resource>
+			<name>item-option-selector-choice</name>
+			<description><![CDATA[An item selection option selector choice.]]></description>
+			<uri>{item-option-selector}/{option-value-id}</uri>
+			<choices-for>items.item</choices-for>
+		</resource>
+
+		<relationship>
+			<name>selector-for-item-definition-option</name>
+			<description><![CDATA[Selector for an item option value.]]></description>
+			<rel>selector</rel>
+			<rev>option</rev>
+			<from>itemdefinitions.item-definition-option</from>
+			<to>item-option-selector</to>
+		</relationship>
+
+		<relationship>
+			<name>item-option-selector-for-item-option-selector-choice</name>
+			<description><![CDATA[Retrieve a choice's selector.]]></description>
+			<rel>selector</rel>
+			<from>item-option-selector-choice</from>
+			<to>item-option-selector</to>
+		</relationship>
+	</family>
+</definitions>

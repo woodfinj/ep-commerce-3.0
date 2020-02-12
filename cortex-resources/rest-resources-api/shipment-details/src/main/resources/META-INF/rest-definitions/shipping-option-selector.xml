@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+
+	<family>
+		<name>shipmentdetails</name>
+
+		<resource>
+			<name>shipping-option-info-selector</name>
+			<description><![CDATA[Selector to choose shipping option.]]></description>
+			<uri>{shipping-option-info}/selector</uri>
+			<selector-for>shipping-option-info</selector-for>
+		</resource>
+
+		<resource>
+			<name>shipping-option-info-selector-choice</name>
+			<description><![CDATA[Selector choice for the shipping option selector.]]></description>
+			<uri>{shipping-option-info-selector}/{shipping-option}</uri>
+			<choices-for>shipping-option-info-selector</choices-for>
+		</resource>
+
+		<relationship>
+			<name>shipping-option-info-selector-to-shipping-option-info</name>
+			<description><![CDATA[Retrieve shipping option info.]]></description>
+			<rel>shippingoptioninfo</rel>
+			<rev>selector</rev>
+			<from>shipping-option-info-selector</from>
+			<to>shipping-option-info</to>
+		</relationship>
+
+	</family>
+</definitions>

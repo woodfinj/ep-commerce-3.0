@@ -1,0 +1,225 @@
+/**
+ * Copyright (c) Elastic Path Software Inc., 2014
+ */
+package com.elasticpath.importexport.common.dto.catalogs;
+
+import java.util.Collections;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
+
+import com.elasticpath.common.dto.DisplayValue;
+import com.elasticpath.common.dto.Dto;
+
+/**
+ * The implementation of the <code>Dto</code> interface that contains data of CatalogAttribute object.
+ * <p>
+ * This implementation designed for JAXB to working with xml representation of data
+ */
+@XmlRootElement(name = AttributeDTO.ROOT_ELEMENT)
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(propOrder = { })
+public class AttributeDTO implements Dto {
+
+	/** XML Root element name. */
+	public static final String ROOT_ELEMENT = "attribute";
+
+	private static final long serialVersionUID = 1L;
+
+	@XmlElement(name = "key", required = true)
+	private String key;
+
+	@XmlElementWrapper(name = "name")
+	@XmlElement(name = "value", required = true)
+	private List<DisplayValue> nameValues;
+
+	@XmlElement(name = "usage", required = true)
+	private AttributeUsageType usage;
+
+	@XmlElement(name = "type", required = true)
+	private AttributeTypeType type;
+
+	@XmlElement(name = "multilanguage", required = true)
+	private Boolean multiLanguage;
+
+	@XmlElement(name = "required", required = true)
+	private Boolean required;
+
+	@XmlElement(name = "multivalue", required = true)
+	private AttributeMultiValueTypeType multivalue;
+
+	@XmlElement(name = "global", required = true)
+	private Boolean global;
+
+	/**
+	 * Gets the key.
+	 *
+	 * @return the key
+	 */
+	public String getKey() {
+		return key;
+	}
+
+	/**
+	 * Sets the key.
+	 *
+	 * @param key the key to set
+	 */
+	public void setKey(final String key) {
+		this.key = key;
+	}
+
+	/**
+	 * Gets the display name values for different locales.
+	 *
+	 * @return the nameValues
+	 */
+	public List<DisplayValue> getNameValues() {
+		if (nameValues == null) {
+			return Collections.emptyList();
+		}
+		return nameValues;
+	}
+
+	/**
+	 * Sets the display name values for different locales.
+	 *
+	 * @param nameValues the nameValues to set
+	 */
+	public void setNameValues(final List<DisplayValue> nameValues) {
+		this.nameValues = nameValues;
+	}
+
+	/**
+	 * Gets the usage.
+	 *
+	 * @return the usage
+	 */
+	public AttributeUsageType getUsage() {
+		return usage;
+	}
+
+	/**
+	 * Sets the usage.
+	 *
+	 * @param usage the usage to set
+	 */
+	public void setUsage(final AttributeUsageType usage) {
+		this.usage = usage;
+	}
+
+	/**
+	 * Gets the product type.
+	 *
+	 * @return the AttributeTypeType
+	 */
+	public AttributeTypeType getType() {
+		return type;
+	}
+
+	/**
+	 * Sets the product type.
+	 *
+	 * @param type the type to set
+	 */
+	public void setType(final AttributeTypeType type) {
+		this.type = type;
+	}
+
+	/**
+	 * Gets the multiLanguage.
+	 *
+	 * @return true if attribute is multiLanguage, false otherwise
+	 */
+	public Boolean getMultiLanguage() {
+		return multiLanguage;
+	}
+
+	/**
+	 * Sets the multiLanguage.
+	 *
+	 * @param multiLanguage true if attribute is multiLanguage, false otherwise
+	 */
+	public void setMultiLanguage(final Boolean multiLanguage) {
+		this.multiLanguage = multiLanguage;
+	}
+
+	/**
+	 * Gets the required.
+	 *
+	 * @return true if attribute is required, false otherwise
+	 */
+	public Boolean getRequired() {
+		return required;
+	}
+
+	/**
+	 * Sets the required.
+	 *
+	 * @param required true if attribute is required, false otherwise
+	 */
+	public void setRequired(final Boolean required) {
+		this.required = required;
+	}
+
+	/**
+	 * Gets the multivalue.
+	 *
+	 * @return RFC_4180 if attribute is RFC 4180 compliant mulit-value,
+	 *         TRUE if attribute is legacy multivalue,
+	 *         FALSE otherwise
+	 */
+	public AttributeMultiValueTypeType getMultivalue() {
+		return multivalue;
+	}
+
+	/**
+	 * Sets the multivalue.
+	 *
+	 * @param multivalue RFC_4180 if attribute is RFC 4180 compliant mulit-value,
+	 *                   TRUE if attribute is legacy multivalue,
+	 *                   FALSE otherwise
+	 */
+	public void setMultivalue(final AttributeMultiValueTypeType multivalue) {
+		this.multivalue = multivalue;
+	}
+
+	/**
+	 * Gets the global.
+	 *
+	 * @return true if attribute is global, false otherwise
+	 */
+	public Boolean getGlobal() {
+		return global;
+	}
+
+	/**
+	 * Sets the global.
+	 *
+	 * @param global true if attribute is global, false otherwise
+	 */
+	public void setGlobal(final Boolean global) {
+		this.global = global;
+	}
+
+	@Override
+	public String toString() {
+		return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE)
+			.append("key", getKey())
+			.append("nameValues", getNameValues())
+			.append("usage", getUsage())
+			.append("type", getType())
+			.append("multiLanguage", getMultiLanguage())
+			.append("required", getRequired())
+			.append("multivalue", getMultivalue())
+			.append("global", getGlobal())
+			.toString();
+	}
+}

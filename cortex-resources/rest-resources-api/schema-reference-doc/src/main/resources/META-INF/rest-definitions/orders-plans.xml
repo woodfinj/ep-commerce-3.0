@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+
+	<family>
+		<name>orders</name>
+		<plan>
+			<name>read-order</name>
+			<description>
+				<![CDATA[
+Retrieves the cart's order. An order may have Needinfos. Needinfos identify a condition that must be satisfied before a transaction can complete.
+Needinfos link to a selector where the customer can select the missing condition. Once the Needinfos are
+satisfied the order can be submitted to a purchase.
+				]]>
+			</description>
+			<step>
+				<description><![CDATA[Read an order from a cart.]]></description>
+				<start>carts.cart</start>
+				<follow-link>order</follow-link>
+				<link-back>cart</link-back>
+				<result>order</result>
+			</step>
+		</plan>
+
+		<plan>
+			<name>read-order-email</name>
+			<description><![CDATA[Read email address associated with order.]]></description>
+			<step>
+				<description><![CDATA[Read emailinfo of the order.]]></description>
+				<start>order</start>
+				<follow-link>emailinfo</follow-link>
+				<link-back>order</link-back>
+				<result>email-info</result>
+			</step>
+			<step>
+				<description><![CDATA[Read email used for the order.]]></description>
+				<start>email-info</start>
+				<follow-link>email</follow-link>
+				<result>emails.email</result>
+			</step>
+		</plan>
+
+		<plan>
+			<name>read-email-needinfo-from-order</name>
+			<description><![CDATA[Read the order's email needinfo. When an email needinfo appears on
+			the order, it means the customer's email has not been selected for the purchase. Likely,
+			this customer does not have an account. Follow the workflow to read the email needinfo.]]></description>
+			<step>
+				<description><![CDATA[Read order email needinfo from order.]]></description>
+				<start>order</start>
+				<follow-link>needinfo</follow-link>
+				<result>email-info</result>
+			</step>
+		</plan>
+
+		<plan>
+			<name>read-email-needinfo-from-purchaseform</name>
+			<description><![CDATA[Read order email needinfo. When an email needinfo appears on the
+			purchase form, it means the customer's email has not been selected for the purchase. Likely, this customer does not have an account. Follow the workflow to read the email needinfo.]]></description>
+			<step>
+				<description><![CDATA[Read order email needinfo from purchaseform.]]></description>
+				<start>purchases.create-purchase-form</start>
+				<follow-link>needinfo</follow-link>
+				<result>email-info</result>
+			</step>
+		</plan>
+		
+<!--		Billing Info-->
+		<plan>
+			<name>billingaddress-info-selector</name>
+			<description>
+				<![CDATA[
+Use a selector to select the billing address to use for the purchase. Follow the workflow to read the billing address info
+and then create a choice to select the billing address to use for the purchase.
+				]]>
+			</description>
+			<step>
+				<description><![CDATA[Retrieve the selector.]]></description>
+				<start>billingaddress-info</start>
+				<follow-link>selector</follow-link>
+				<link-back>billingaddressinfo</link-back>
+				<result>billingaddress-info-selector</result>
+			</step>
+			<step>
+				<description><![CDATA[Retrieve a choice.]]></description>
+				<start>billingaddress-info-selector</start>
+				<follow-link>choice</follow-link>
+				<link-back>selector</link-back>
+				<result>billingaddress-info-selector-choice</result>
+			</step>
+			<step>
+				<description><![CDATA[Retrieve a selected choice, if any.]]></description>
+				<start>billingaddress-info-selector</start>
+				<follow-link>chosen</follow-link>
+				<link-back>selector</link-back>
+				<result>billingaddress-info-selector-choice</result>
+			</step>
+			<step>
+				<description><![CDATA[Retrieve a choice's description.]]></description>
+				<start>billingaddress-info-selector-choice</start>
+				<follow-link>description</follow-link>
+				<result>addresses.address</result>
+			</step>
+			<step>
+				<description><![CDATA[Select a choice.]]></description>
+				<start>billingaddress-info-selector-choice</start>
+				<submit/>
+				<to>billingaddress-info-selector-choice</to>
+				<via-link>selectaction</via-link>
+				<result>addresses.address</result>
+			</step>
+		</plan>
+
+		<plan>
+			<name>read-billing-address</name>
+			<description><![CDATA[Read the currently selected billingaddress for the order.]]></description>
+			<step>
+				<description><![CDATA[Read billing address info from an order.]]></description>
+				<start>order</start>
+				<follow-link>billingaddressinfo</follow-link>
+				<link-back>order</link-back>
+				<result>billingaddress-info</result>
+			</step>
+			<step>
+				<description><![CDATA[Read address from billing address info.]]></description>
+				<start>billingaddress-info</start>
+				<follow-link>billingaddress</follow-link>
+				<result>addresses.address</result>
+			</step>
+		</plan>
+
+		<plan>
+			<name>read-billingaddress-needinfo-from-order</name>
+			<description><![CDATA[When a billingaddress needinfo appears on the order, it means
+			the billingaddress has not been selected for the purchase.
+			Follow the workflow to read the billingaddress needinfo.]]></description>
+			<step>
+				<description><![CDATA[Read billingaddress needinfo from order.]]></description>
+				<start>order</start>
+				<follow-link>needinfo</follow-link>
+				<result>billingaddress-info</result>
+			</step>
+		</plan>
+
+		<plan>
+			<name>read-billingaddress-needinfo-from-purchaseform</name>
+			<description><![CDATA[Read billingaddress needinfo.]]></description>
+			<step>
+				<description><![CDATA[Read billingaddress needinfo from purchaseform.]]></description>
+				<start>purchases.create-purchase-form</start>
+				<follow-link>needinfo</follow-link>
+				<result>billingaddress-info</result>
+			</step>
+		</plan>
+		
+<!--		Deliveries-->
+		<plan>
+			<name>read-order-delivery</name>
+			<description><![CDATA[Read a delivery from a list of deliveries]]></description>
+			<step>
+				<description><![CDATA[Order to a list of deliveries]]></description>
+				<start>order</start>
+				<follow-link>deliveries</follow-link>
+				<result>deliveries</result>
+			</step>
+			<step>
+				<description><![CDATA[List of deliveries to delivery]]></description>
+				<start>deliveries</start>
+				<follow-link>element</follow-link>
+				<result>delivery</result>
+			</step>
+		</plan>
+		
+	</family>
+</definitions>

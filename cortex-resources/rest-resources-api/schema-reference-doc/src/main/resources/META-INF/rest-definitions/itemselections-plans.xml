@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+
+	<family>
+		<name>itemselections</name>
+		<description>
+			<![CDATA[
+The Items selections resource provides selectors to allow customers to select item options.
+			]]>
+		</description>
+
+		<plan>
+			<name>select-item-definition-option</name>
+			<description><![CDATA[Select an item definition option.]]></description>
+			<step>
+				<description><![CDATA[Retrieve the selector.]]></description>
+				<start>itemdefinitions.item-definition-option</start>
+				<follow-link>selector</follow-link>
+				<link-back>option</link-back>
+				<result>item-option-selector</result>
+			</step>
+			<step>
+				<description><![CDATA[Retrieve a choice.]]></description>
+				<start>item-option-selector</start>
+				<follow-link>choice</follow-link>
+				<link-back>selector</link-back>
+				<result>item-option-selector-choice</result>
+			</step>
+			<step>
+				<description><![CDATA[Select a choice.]]></description>
+				<start>item-option-selector-choice</start>
+				<submit/>
+				<to>item-option-selector-choice</to>
+				<via-link>selectaction</via-link>
+				<result>items.item</result>
+			</step>
+		</plan>
+
+	</family>
+</definitions>

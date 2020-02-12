@@ -1,0 +1,106 @@
+$tool_bar_padding: 3px;
+$tool_bar_spacing: 2px;
+$tool_item_padding: 4px;
+$tool_item_spacing: 4px;
+$button_hover_color: #F2F6FA;
+
+Tool {
+
+	// http://download.eclipse.org/rt/rap/doc/3.1/guide/reference/theming/ToolBar.html
+	&Bar {
+		padding: 0; // this changes root tab spacing
+		spacing: $tool_bar_spacing;
+		font: $default-font;
+
+		// &[BORDER] {
+		// 	padding: $tool_bar_padding;
+		// }
+		&[FLAT] {
+			padding: $tool_bar_padding;
+		}
+		// &[FLAT] {
+		// 	&[BORDER] {
+		// 		padding: $tool_bar_padding;
+		// 	}
+			
+		// }
+	}
+
+	// http://download.eclipse.org/rt/rap/doc/3.1/guide/reference/theming/ToolBar.html#ToolItem
+	&Item {
+		&,
+		&[FLAT]{
+			font: $default-font;
+			color: $default-font-color;
+			padding: $tool_item_padding;
+			spacing: $tool_item_spacing;
+			text-shadow: none;
+			&,
+			&:first,
+			&:last {
+				padding: 5px 2px;
+				&:hover {
+					background-color: $button_hover_color;
+					background-image: none;
+					border: 1px solid $button_hover_color;
+				}
+				&:active {
+					background-color: $button_hover_color;
+					border: 1px solid $button_hover_color;
+				}
+				&:disabled {
+					color: $gray-light;
+				}
+			}
+
+			&[VERTICAL] {
+				&,
+				&:first,
+				&:last {
+					padding: $tool_item_padding; // NOT WORKING!!
+				}
+			}
+		}
+		
+		&:disabled {
+			opacity: 1; // NOT WORKING!!
+		}
+
+
+		// http://download.eclipse.org/rt/rap/doc/3.1/guide/reference/theming/ToolBar.html#ToolItem-Separator
+		&-Separator {
+			width: 4px;
+		}
+
+		// http://download.eclipse.org/rt/rap/doc/3.1/guide/reference/theming/ToolBar.html#ToolItem-DropDownIcon
+		&-DropDownIcon {
+			background-image: url('themes/icons/ToolItem-DropDownIcon.png');
+			&:disabled {
+				background-image: url('themes/icons/ToolItem-DropDownIcon_hover.png');
+			}
+			&:selected {
+				background-image: url('themes/icons/ToolItem-DropDownIcon_selected.png'); // NOT WORKING - only for CHECK, RADIO??
+			}
+		}
+	}
+
+	// http://download.eclipse.org/rt/rap/doc/3.1/guide/reference/theming/ToolTip.html
+	&Tip {
+
+
+		// http://download.eclipse.org/rt/rap/doc/3.1/guide/reference/theming/ToolTip.html#ToolTip-Image
+		&-Image {
+
+		}
+
+		// http://download.eclipse.org/rt/rap/doc/3.1/guide/reference/theming/ToolTip.html#ToolTip-Text
+		&-Text {
+
+		}
+
+		// http://download.eclipse.org/rt/rap/doc/3.1/guide/reference/theming/ToolTip.html#ToolTip-Message
+		&-Message {
+
+		}
+	}
+}

@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogs>
+<catalog>
+    <code>search_catalog</code>
+    <type>master</type>
+    <name>Search Catalog</name>
+    <languages>
+        <language>en_CA</language>
+        <language>fr_CA</language>
+    </languages>
+    <defaultlanguage>en_CA</defaultlanguage>
+    <attributes>
+        <attribute>
+            <key>B00001</key>
+            <name><value language="en">Length</value></name>
+            <usage>Product</usage>
+            <type>Integer</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>B00003</key>
+            <name><value language="en">Language</value></name>
+            <usage>Product</usage>
+            <type>ShortText</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>true</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>B00002</key>
+            <name><value language="en">Summary</value></name>
+            <usage>Product</usage>
+            <type>LongText</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+    </attributes>
+    <categorytypes>
+        <categorytype>
+            <name>DVD</name>
+            <assignedattributes/>
+        </categorytype>
+    </categorytypes>
+    <producttypes>
+        <producttype>
+            <guid>5e8dfd31-863e-4483-9129-3bf041a438f0</guid>
+            <name>Movies_DVD_Multisku</name>
+            <assignedattributes>
+                <attributekey>B00001</attributekey>
+                <attributekey>B00003</attributekey>
+                <attributekey>B00002</attributekey>
+            </assignedattributes>
+            <defaulttaxcode>GOODS</defaulttaxcode>
+            <multisku>
+                <assignedskuoptions>
+                    <skuoption>dvdformat</skuoption>
+                </assignedskuoptions>
+                <assignedattributes/>
+            </multisku>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>4037ae9d-99c1-42db-b220-7eecfc979b10</guid>
+            <name>Movies_DVD</name>
+            <assignedattributes>
+                <attributekey>B00001</attributekey>
+                <attributekey>B00003</attributekey>
+                <attributekey>B00002</attributekey>
+            </assignedattributes>
+            <defaulttaxcode>GOODS</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>4026c29d-67b7-4d75-9dcc-9f2b60ff20ca</guid>
+            <name>Music</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+        </producttype>
+    </producttypes>
+    <skuoptions>
+        <skuoption>
+            <code>dvdformat</code>
+            <name>
+                <value language="en_CA">Format</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>bluray</code>
+                    <name>
+                        <value language="en_CA">BluRay</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>regular</code>
+                    <name>
+                        <value language="en_CA">Regular</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+    </skuoptions>
+    <brands>
+        <brand>
+            <code>Paramount</code>
+            <name>
+                <value language="en_CA">Paramount</value>
+            </name>
+        </brand>
+        <brand>
+            <code>Warner_Bros</code>
+            <name>
+                <value language="en_CA">Warner Bros</value>
+            </name>
+        </brand>
+        <brand>
+            <code>Disney_Studios</code>
+            <name>
+                <value language="en_CA">Disney Studios</value>
+            </name>
+        </brand>
+    </brands>
+</catalog>
+
+<catalog>
+    <code>MobileCatalog</code>
+    <type>master</type>
+    <name>Mobile Catalog</name>
+    <languages>
+        <language>fr</language>
+        <language>fr_CA</language>
+        <language>en</language>
+		<language>en_US</language>
+    </languages>
+    <defaultlanguage>en</defaultlanguage>
+
+    <attributes>
+        <attribute>
+            <key>A00001</key>
+            <name><value language="en">Plot Keyword</value></name>
+            <usage>Product</usage>
+            <type>ShortText</type>
+            <multilanguage>true</multilanguage>
+            <required>false</required>
+            <multivalue>true</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00005</key>
+            <name><value language="en">Opening DayTime</value></name>
+            <usage>Product</usage>
+            <type>DateTime</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00004</key>
+            <name><value language="en">Languages</value></name>
+            <usage>Product</usage>
+            <type>ShortText</type>
+            <multilanguage>false</multilanguage>
+            <required>true</required>
+            <multivalue>true</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00002</key>
+            <name><value language="en">Release Date</value></name>
+            <usage>Product</usage>
+            <type>Date</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00003</key>
+            <name>
+                <value language="en">Storyline</value>
+                <value language="fr_CA">Scénario</value>
+            </name>
+            <usage>Product</usage>
+            <type>LongText</type>
+            <multilanguage>true</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00008</key>
+            <name><value language="en">Poster</value></name>
+            <usage>Product</usage>
+            <type>Image</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00006</key>
+            <name><value language="en">Color</value></name>
+            <usage>Product</usage>
+            <type>Boolean</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00007</key>
+            <name><value language="en">Runtime</value></name>
+            <usage>Product</usage>
+            <type>Integer</type>
+            <multilanguage>false</multilanguage>
+            <required>true</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00009</key>
+            <name><value language="en">Viewer's Rating</value></name>
+            <usage>Product</usage>
+            <type>Decimal</type>
+            <multilanguage>false</multilanguage>
+            <required>true</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00010</key>
+            <name><value language="en">SoundTrack</value></name>
+            <usage>Product</usage>
+            <type>File</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00011</key>
+            <name><value language="en">Tagline</value></name>
+            <usage>Product</usage>
+            <type>ShortText</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00012</key>
+            <name><value language="en">Rental Days</value></name>
+            <usage>SKU</usage>
+            <type>Integer</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00013</key>
+            <name><value language="en">Format</value></name>
+            <usage>Product</usage>
+            <type>LongText</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00014</key>
+            <name><value language="en">Specific Resolution</value></name>
+            <usage>SKU</usage>
+            <type>ShortText</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00016</key>
+            <name><value language="en">Release Date</value></name>
+            <usage>SKU</usage>
+            <type>Date</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00015</key>
+            <name><value language="en">Screen Format</value></name>
+            <usage>SKU</usage>
+            <type>ShortText</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00017</key>
+            <name><value language="en">Specific Available Since</value></name>
+            <usage>SKU</usage>
+            <type>DateTime</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>A00018</key>
+            <name><value language="en">Color</value></name>
+            <usage>SKU</usage>
+            <type>Boolean</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>catReleaseDate</key>
+            <name><value language="en">Release Date</value></name>
+            <usage>Category</usage>
+            <type>Date</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>catImage</key>
+            <name><value language="en">Category Image</value></name>
+            <usage>Category</usage>
+            <type>Image</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>true</global>
+        </attribute>
+        <attribute>
+            <key>catName</key>
+            <name><value language="en">Name</value></name>
+            <usage>Category</usage>
+            <type>ShortText</type>
+            <multilanguage>true</multilanguage>
+            <required>true</required>
+            <multivalue>false</multivalue>
+            <global>true</global>
+        </attribute>
+        <attribute>
+            <key>catTotalItems</key>
+            <name><value language="en">Total items</value></name>
+            <usage>Category</usage>
+            <type>Integer</type>
+            <multilanguage>false</multilanguage>
+            <required>true</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>catReleased</key>
+            <name><value language="en">Released</value></name>
+            <usage>Category</usage>
+            <type>Boolean</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>catTheme</key>
+            <name><value language="en">Category Theme</value></name>
+            <usage>Category</usage>
+            <type>File</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>catRating</key>
+            <name><value language="en">Category Rating</value></name>
+            <usage>Category</usage>
+            <type>Decimal</type>
+            <multilanguage>false</multilanguage>
+            <required>true</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>catDescription</key>
+            <name><value language="en">Category Description</value></name>
+            <usage>Category</usage>
+            <type>LongText</type>
+            <multilanguage>false</multilanguage>
+            <required>true</required>
+            <multivalue>false</multivalue>
+            <global>true</global>
+        </attribute>
+        <attribute>
+            <key>catLastModified</key>
+            <name><value language="en">Last modified</value></name>
+            <usage>Category</usage>
+            <type>DateTime</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>catSubCategories</key>
+            <name><value language="en">Subcategories</value></name>
+            <usage>Category</usage>
+            <type>ShortText</type>
+            <multilanguage>true</multilanguage>
+            <required>false</required>
+            <multivalue>true</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>Thumbnail_option</key>
+            <name><value language="en">Thumbnail for Movie Options</value></name>
+            <usage>SKU</usage>
+            <type>Image</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>product_image</key>
+            <name><value language="en">Product Image</value></name>
+            <usage>Product</usage>
+            <type>Image</type>
+            <multilanguage>false</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>fullsize_image</key>
+            <name><value language="en">Fullsize Image</value></name>
+            <usage>Product</usage>
+            <type>Image</type>
+            <multilanguage>true</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>M0001</key>
+            <name><value language="en">Full Spec</value></name>
+            <usage>Product</usage>
+            <type>File</type>
+            <multilanguage>true</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>M0002</key>
+            <name><value language="en">Product Color</value></name>
+            <usage>Product</usage>
+            <type>ShortText</type>
+            <multilanguage>true</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+        <attribute>
+            <key>description</key>
+            <name><value language="en">Product Description</value></name>
+            <usage>Product</usage>
+            <type>LongText</type>
+            <multilanguage>true</multilanguage>
+            <required>false</required>
+            <multivalue>false</multivalue>
+            <global>false</global>
+        </attribute>
+    </attributes>
+    <categorytypes>
+        <categorytype>
+            <name>Accessories</name>
+            <assignedattributes/>
+        </categorytype>
+        <categorytype>
+            <name>Phones</name>
+            <assignedattributes/>
+        </categorytype>
+        <categorytype>
+            <name>Movies</name>
+            <assignedattributes>
+                <attributekey>catDescription</attributekey>
+                <attributekey>catRating</attributekey>
+                <attributekey>catSubCategories</attributekey>
+                <attributekey>catName</attributekey>
+            </assignedattributes>
+        </categorytype>
+        <categorytype>
+            <name>TV</name>
+            <assignedattributes/>
+        </categorytype>
+        <categorytype>
+            <name>VideoGames</name>
+            <assignedattributes>
+                <attributekey>catDescription</attributekey>
+                <attributekey>catTheme</attributekey>
+                <attributekey>catTotalItems</attributekey>
+                <attributekey>catReleased</attributekey>
+                <attributekey>catLastModified</attributekey>
+                <attributekey>catReleaseDate</attributekey>
+                <attributekey>catRating</attributekey>
+                <attributekey>catImage</attributekey>
+                <attributekey>catSubCategories</attributekey>
+                <attributekey>catName</attributekey>
+            </assignedattributes>
+        </categorytype>
+        <categorytype>
+            <name>Games</name>
+            <assignedattributes>
+                <attributekey>catDescription</attributekey>
+                <attributekey>catTheme</attributekey>
+                <attributekey>catTotalItems</attributekey>
+                <attributekey>catReleased</attributekey>
+                <attributekey>catLastModified</attributekey>
+                <attributekey>catReleaseDate</attributekey>
+                <attributekey>catRating</attributekey>
+                <attributekey>catImage</attributekey>
+                <attributekey>catSubCategories</attributekey>
+                <attributekey>catName</attributekey>
+            </assignedattributes>
+        </categorytype>
+        <categorytype>
+            <name>MobileGames</name>
+            <assignedattributes>
+                <attributekey>catDescription</attributekey>
+                <attributekey>catTheme</attributekey>
+                <attributekey>catTotalItems</attributekey>
+                <attributekey>catReleased</attributekey>
+                <attributekey>catLastModified</attributekey>
+                <attributekey>catReleaseDate</attributekey>
+                <attributekey>catRating</attributekey>
+                <attributekey>catImage</attributekey>
+                <attributekey>catSubCategories</attributekey>
+                <attributekey>catName</attributekey>
+            </assignedattributes>
+        </categorytype>
+        <categorytype>
+            <guid>7254f0b3-1808-4f10-b955-4a4ee72c59fc</guid>
+            <name>GiftCertificate</name>
+            <assignedattributes>
+                <attributekey>catDescription</attributekey>
+                <attributekey>catImage</attributekey>
+            </assignedattributes>
+        </categorytype>
+        <categorytype>
+            <guid>be7b0197-cdb3-48dd-8217-6d028bc26f69</guid>
+            <name>Phone Plan</name>
+            <assignedattributes>
+                <attributekey>catDescription</attributekey>
+                <attributekey>catName</attributekey>
+            </assignedattributes>
+        </categorytype>
+    </categorytypes>
+    <producttypes>
+        <producttype>
+            <guid>a738a6F2-0aC6-B99f-ab6f-afe483e570f8</guid>
+            <name>Fee</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>true</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>a738a602-0a06-492f-ab6f-9fe483e570f8</guid>
+            <name>Headset</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>0069c189-c243-4e23-a857-9a4dff1d3c9f</guid>
+            <name>Phones</name>
+            <assignedattributes>
+                <attributekey>product_image</attributekey>
+                <attributekey>M0001</attributekey>
+                <attributekey>fullsize_image</attributekey>
+                <attributekey>description</attributekey>
+                <attributekey>M0002</attributekey>
+            </assignedattributes>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>0f845d27-a0d1-4ad6-9753-0c656c0939ab</guid>
+            <name>Movies</name>
+            <assignedattributes>
+                <attributekey>A00003</attributekey>
+                <attributekey>A00013</attributekey>
+                <attributekey>A00009</attributekey>
+                <attributekey>A00008</attributekey>
+                <attributekey>A00006</attributekey>
+                <attributekey>A00001</attributekey>
+                <attributekey>A00002</attributekey>
+                <attributekey>A00010</attributekey>
+                <attributekey>A00007</attributekey>
+                <attributekey>A00004</attributekey>
+                <attributekey>A00011</attributekey>
+                <attributekey>A00005</attributekey>
+            </assignedattributes>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>73296dff-2faf-47ec-bd52-a166255b644d</guid>
+            <name>Movies_MultiSku</name>
+            <assignedattributes>
+                <attributekey>A00003</attributekey>
+                <attributekey>A00013</attributekey>
+                <attributekey>A00009</attributekey>
+                <attributekey>A00008</attributekey>
+                <attributekey>A00006</attributekey>
+                <attributekey>A00001</attributekey>
+                <attributekey>A00010</attributekey>
+                <attributekey>A00002</attributekey>
+                <attributekey>A00007</attributekey>
+                <attributekey>A00004</attributekey>
+                <attributekey>A00011</attributekey>
+                <attributekey>A00005</attributekey>
+            </assignedattributes>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <multisku>
+                <assignedskuoptions>
+                    <skuoption>PurchaseType</skuoption>
+                    <skuoption>VideoQuality</skuoption>
+                </assignedskuoptions>
+                <assignedattributes>
+                    <attributekey>A00012</attributekey>
+                    <attributekey>A00016</attributekey>
+                    <attributekey>A00017</attributekey>
+                    <attributekey>A00018</attributekey>
+                    <attributekey>A00015</attributekey>
+                    <attributekey>A00014</attributekey>
+                    <attributekey>Thumbnail_option</attributekey>
+                </assignedattributes>
+            </multisku>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>32e06045-53dc-46f9-800c-372055d3db38</guid>
+            <name>Movies_MultiSku_VidQuality</name>
+            <assignedattributes>
+                <attributekey>A00003</attributekey>
+                <attributekey>A00013</attributekey>
+                <attributekey>A00009</attributekey>
+                <attributekey>A00008</attributekey>
+                <attributekey>A00006</attributekey>
+                <attributekey>A00001</attributekey>
+                <attributekey>A00002</attributekey>
+                <attributekey>A00010</attributekey>
+                <attributekey>A00007</attributekey>
+                <attributekey>A00004</attributekey>
+                <attributekey>A00005</attributekey>
+                <attributekey>A00011</attributekey>
+            </assignedattributes>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <multisku>
+                <assignedskuoptions>
+                    <skuoption>VideoQuality</skuoption>
+                </assignedskuoptions>
+                <assignedattributes>
+                    <attributekey>A00017</attributekey>
+                    <attributekey>A00014</attributekey>
+                </assignedattributes>
+            </multisku>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>a7a84409-b418-4b39-997b-8b6ece5eaee3</guid>
+            <name>TV</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <multisku>
+                <assignedskuoptions>
+                    <skuoption>résolution</skuoption>
+                </assignedskuoptions>
+                <assignedattributes>
+                    <attributekey>Thumbnail_option</attributekey>
+                </assignedattributes>
+            </multisku>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>c679992c-9d20-4b85-8048-5682ffab2f91</guid>
+            <name>TVPack</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>cf5eb98e-6d71-47b3-9408-d03657170c74</guid>
+            <name>Games</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>d163b25d-892d-46c0-8412-6621d7d92125</guid>
+            <name>GamesPack</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>a7531d0f-34af-4b11-ac2a-166959fdaca2</guid>
+            <name>Accessories_Multisku</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <multisku>
+                <assignedskuoptions>
+                    <skuoption>PurchaseType</skuoption>
+                    <skuoption>VideoQuality</skuoption>
+                </assignedskuoptions>
+                <assignedattributes>
+                    <attributekey>Thumbnail_option</attributekey>
+                </assignedattributes>
+            </multisku>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>80900ce2-081c-4c62-a518-bf5a76af7be4</guid>
+            <name>PhysicalBundle</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+        </producttype>
+        <producttype>
+            <guid>4fe9e351-b5ce-4dbd-a47a-ee2ceb2d6e2b</guid>
+            <name>Gift Certificate</name>
+            <assignedattributes>
+                <attributekey>description</attributekey>
+            </assignedattributes>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <multisku>
+                <assignedskuoptions>
+                    <skuoption>GC_Denominations</skuoption>
+                    <skuoption>GC_Themes</skuoption>
+                </assignedskuoptions>
+                <assignedattributes/>
+            </multisku>
+            <nodiscount>true</nodiscount>
+            <assignedcartitemmodifiergroups>
+                <code>giftCertificate_mobee</code>
+            </assignedcartitemmodifiergroups>
+        </producttype>
+        <producttype>
+            <guid>d2208dd7-4913-4f86-8147-7f343f3c21bd</guid>
+            <name>SingleSkuConfigurableProduct</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <nodiscount>false</nodiscount>
+            <assignedcartitemmodifiergroups>
+                <code>allFieldTypes</code>
+            </assignedcartitemmodifiergroups>
+        </producttype>
+        <producttype>
+            <guid>3d32ae29-dc17-42c5-92d6-6135d83311d5</guid>
+            <name>MultiSkuConfigurableProduct</name>
+            <assignedattributes/>
+            <defaulttaxcode>NONE</defaulttaxcode>
+            <multisku>
+                <assignedskuoptions>
+                    <skuoption>CLR</skuoption>
+                </assignedskuoptions>
+                <assignedattributes/>
+            </multisku>
+            <nodiscount>false</nodiscount>
+            <assignedcartitemmodifiergroups>
+                <code>allFieldTypes</code>
+            </assignedcartitemmodifiergroups>
+        </producttype>
+        <producttype>
+            <guid>fe415516-2806-4655-8082-b0529c488699</guid>
+            <name>Phone Plan</name>
+            <assignedattributes/>
+            <defaulttaxcode>SERVICE</defaulttaxcode>
+            <multisku>
+                <assignedskuoptions>
+                    <skuoption>Frequency</skuoption>
+                </assignedskuoptions>
+                <assignedattributes/>
+            </multisku>
+            <nodiscount>false</nodiscount>
+        </producttype>
+    </producttypes>
+    <skuoptions>
+        <skuoption>
+            <code>VideoQuality</code>
+            <name>
+                <value language="fr_CA">qualité de la vidéo</value>
+                <value language="en">Video Quality</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>SD</code>
+                    <name>
+                        <value language="fr_CA">définition standard</value>
+                        <value language="en">Standard Definition</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>HD</code>
+                    <name>
+                        <value language="fr_CA">en haute définition</value>
+                        <value language="en">High Definition</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+        <skuoption>
+            <code>PurchaseType</code>
+            <name>
+                <value language="fr_CA">type d'achat</value>
+                <value language="en">Purchase Type</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>Buy</code>
+                    <name>
+                        <value language="fr_CA">acheter</value>
+                        <value language="en">Buy</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>Rent</code>
+                    <name>
+                        <value language="fr_CA">louer</value>
+                        <value language="en">Rent</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+        <skuoption>
+            <code>résolution</code>
+            <name>
+                <value language="fr_CA">résolution</value>
+                <value language="en">Resolution</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>720pixels</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="en">720 Pixels</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>400pixels</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="en">400 Pixels</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+		<skuoption>
+            <code>main</code>
+            <name>
+                <value language="fr_CA">principal</value>
+                <value language="en">main</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>hotdog</code>
+                    <name>
+                        <value language="fr_CA">hotdog</value>
+                        <value language="en">hotdog</value>
+                    </name>
+                    <ordering>30</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>burger</code>
+                    <name>
+                        <value language="fr_CA">burger</value>
+                        <value language="en">burger</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>sandwich</code>
+                    <name>
+                        <value language="fr_CA">sandwich</value>
+                        <value language="en">sandwich</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+        <skuoption>
+            <code>side</code>
+            <name>
+                <value language="fr_CA">côté</value>
+                <value language="en">side</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>fries</code>
+                    <name>
+                        <value language="fr_CA">frites</value>
+                        <value language="en">fries</value>
+                    </name>
+                    <ordering>30</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>salad</code>
+                    <name>
+                        <value language="fr_CA">salade</value>
+                        <value language="en">salad</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>soup</code>
+                    <name>
+                        <value language="fr_CA">soupe</value>
+                        <value language="en">soup</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+        <skuoption>
+            <code>GC_Themes</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="fr"/>
+                <value language="en">Design</value>
+                <value language="en_US">Design</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>berries_theme</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">Berries</value>
+                        <value language="en_US">Berries</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>hummingbird_theme</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">Hummingbird</value>
+                        <value language="en_US">Hummingbird</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+        <skuoption>
+            <code>GC_Denominations</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="fr"/>
+                <value language="en">Amount</value>
+                <value language="en_US">Amount</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>ONE_HUNDRED_VALUE</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">100</value>
+                        <value language="en_US">100</value>
+                    </name>
+                    <ordering>30</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>FIFTY_VALUE</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">50</value>
+                        <value language="en_US">50</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>TWENTY_VALUE</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">20</value>
+                        <value language="en_US">20</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+        <skuoption>
+            <code>CLR</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="fr"/>
+                <value language="en">Color</value>
+                <value language="en_US">Color</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>WHTE</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">White</value>
+                        <value language="en_US">White</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>BLCK</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">Black</value>
+                        <value language="en_US">Black</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+        <skuoption>
+            <code>Frequency</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="fr"/>
+                <value language="en">Billed</value>
+                <value language="en_US">Billed</value>
+            </name>
+            <skuoptionvalues>
+                <skuoptionvalue>
+                    <code>YEARLY</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">per year</value>
+                        <value language="en_US">per year</value>
+                    </name>
+                    <ordering>30</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>WEEKLY</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">per week</value>
+                        <value language="en_US">per week</value>
+                    </name>
+                    <ordering>10</ordering>
+                </skuoptionvalue>
+                <skuoptionvalue>
+                    <code>MONTHLY</code>
+                    <name>
+                        <value language="fr_CA"/>
+                        <value language="fr"/>
+                        <value language="en">per month</value>
+                        <value language="en_US">per month</value>
+                    </name>
+                    <ordering>20</ordering>
+                </skuoptionvalue>
+            </skuoptionvalues>
+        </skuoption>
+    </skuoptions>
+    <brands>
+        <brand>
+            <code>Jawbone</code>
+            <name>
+                <value language="fr_CA">Jawbone_fr</value>
+                <value language="en">Jawbone</value>
+            </name>
+        </brand>
+        <brand>
+            <code>BlueAnt</code>
+            <name>
+                <value language="fr_CA">BlueAnt_fr</value>
+                <value language="en">BlueAnt</value>
+            </name>
+        </brand>
+        <brand>
+            <code>Motorola</code>
+            <name>
+                <value language="fr_CA">Motorola_fr</value>
+                <value language="en">Motorola</value>
+            </name>
+        </brand>
+        <brand>
+            <code>SonyEricsson</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="en">Sony Ericsson</value>
+            </name>
+        </brand>
+        <brand>
+            <code>Hama</code>
+            <name>
+                <value language="fr_CA">Hama</value>
+                <value language="en">Hama</value>
+            </name>
+        </brand>
+        <brand>
+            <code>Samsung</code>
+            <name>
+                <value language="fr_CA">Samsung</value>
+                <value language="en">Samsung</value>
+            </name>
+        </brand>
+        <brand>
+            <code>WarnerBros</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="en">WarnerBros</value>
+            </name>
+        </brand>
+        <brand>
+            <code>Disney</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="en">Disney</value>
+            </name>
+        </brand>
+        <brand>
+            <code>None</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="en">none</value>
+            </name>
+        </brand>
+        <brand>
+            <code>FOX</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="en">FOX Networks</value>
+            </name>
+        </brand>
+        <brand>
+            <code>CBC</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="en">CBC Networks</value>
+            </name>
+        </brand>
+        <brand>
+            <code>BBC</code>
+            <name>
+                <value language="fr_CA"/>
+                <value language="en">BBC Networks</value>
+            </name>
+        </brand>
+    </brands>
+</catalog>
+
+<catalog>
+    <code>Mobile</code>
+    <type>virtual</type>
+    <name>Mobile Virtual Catalog</name>
+    <defaultlanguage>en</defaultlanguage>
+</catalog>
+
+<catalog>
+    <code>rockjamvc</code>
+    <type>virtual</type>
+    <name>Rock Jam Virtual Catalog</name>
+    <defaultlanguage>en</defaultlanguage>
+</catalog>
+
+<catalog>
+    <code>rockjam</code>
+    <type>master</type>
+    <name>Rock Jam</name>
+    <languages>
+        <language>en</language>
+    </languages>
+    <defaultlanguage>en</defaultlanguage>
+</catalog>
+
+<catalog>
+    <code>Toastie</code>
+    <type>virtual</type>
+    <name>ToastieCatalog</name>
+    <defaultlanguage>en</defaultlanguage>
+</catalog>
+<catalog>
+    <code>TokeneeCatalog</code>
+    <type>virtual</type>
+    <name>Tokenee Catalog</name>
+    <defaultlanguage>en</defaultlanguage>
+</catalog>
+    <catalog>
+        <code>Syndication2StoresCatalog</code>
+        <type>master</type>
+        <name>Syndication Two Stores Catalog</name>
+        <languages>
+            <language>en</language>
+            <language>fr</language>
+        </languages>
+        <defaultlanguage>en</defaultlanguage>
+        <attributes>
+            <attribute>
+                <key>attributeTestAttribute1</key>
+                <name>
+                    <value language="en">attributeTestAttribute1En12345</value>
+                    <value language="fr">attributeTestAttribute1Fr12345</value>
+                </name>
+                <usage>Product</usage>
+                <type>ShortText</type>
+                <multilanguage>true</multilanguage>
+                <required>true</required>
+                <multivalue>rfc4180</multivalue>
+                <global>false</global>
+            </attribute>
+            <attribute>
+                <key>categoryTestAttr1</key>
+                <name>
+                    <value language="en">categoryTestAttr1En</value>
+                    <value language="fr">categoryTestAttr1Fr</value>
+                </name>
+                <usage>Category</usage>
+                <type>ShortText</type>
+                <multilanguage>false</multilanguage>
+                <required>true</required>
+                <multivalue>false</multivalue>
+                <global>false</global>
+            </attribute>
+            <attribute>
+                <key>categoryTestAttr2</key>
+                <name>
+                    <value language="en">categoryTestAttr2En</value>
+                    <value language="fr">categoryTestAttr2Fr</value>
+                </name>
+                <usage>Category</usage>
+                <type>LongText</type>
+                <multilanguage>false</multilanguage>
+                <required>true</required>
+                <multivalue>false</multivalue>
+                <global>false</global>
+            </attribute>
+            <attribute>
+                <key>productTestAttribute1</key>
+                <name>
+                    <value language="en">productTestAttribute1En</value>
+                    <value language="fr">productTestAttribute1Fr</value>
+                </name>
+                <usage>Product</usage>
+                <type>ShortText</type>
+                <multilanguage>false</multilanguage>
+                <required>false</required>
+                <multivalue>false</multivalue>
+                <global>false</global>
+            </attribute>
+            <attribute>
+                <key>productTestAttribute2</key>
+                <name>
+                    <value language="en">productTestAttribute2En</value>
+                    <value language="fr">productTestAttribute2Fr</value>
+                </name>
+                <usage>Product</usage>
+                <type>LongText</type>
+                <multilanguage>false</multilanguage>
+                <required>false</required>
+                <multivalue>false</multivalue>
+                <global>false</global>
+            </attribute>
+            <attribute>
+                <key>productTestAttribute3</key>
+                <name>
+                    <value language="en">productTestAttribute3En</value>
+                    <value language="fr">productTestAttribute3Fr</value>
+                </name>
+                <usage>SKU</usage>
+                <type>ShortText</type>
+                <multilanguage>false</multilanguage>
+                <required>false</required>
+                <multivalue>false</multivalue>
+                <global>false</global>
+            </attribute>
+            <attribute>
+            	<key>productTestAttribute4</key>
+            	<name>
+                	<value language="en">productTestAttribute4En</value>
+                	<value language="fr">productTestAttribute4Fr</value>
+            	</name>
+            	<usage>SKU</usage>
+            	<type>ShortText</type>
+            	<multilanguage>false</multilanguage>
+            	<required>false</required>
+            	<multivalue>false</multivalue>
+            	<global>false</global>
+			</attribute>
+            <attribute>
+                <key>productTestAttribute5</key>
+                <name>
+                    <value language="en">productTestAttribute5En</value>
+                    <value language="fr">productTestAttribute5Fr</value>
+                </name>
+                <usage>Product</usage>
+                <type>ShortText</type>
+                <multilanguage>false</multilanguage>
+                <required>false</required>
+                <multivalue>false</multivalue>
+                <global>false</global>
+            </attribute>
+        </attributes>
+        <categorytypes>
+            <categorytype>
+                <guid>5e7716dd-247f-45d8-89eb-a077b765538e</guid>
+                <name>categoryTestCatType</name>
+                <assignedattributes>
+                    <attributekey>categoryTestAttr1</attributekey>
+                    <attributekey>categoryTestAttr2</attributekey>
+                </assignedattributes>
+            </categorytype>
+            <categorytype>
+                <guid>66b4cd12-103e-47e0-b94f-6cf279df0e05</guid>
+                <name>productTestCatType1</name>
+                <assignedattributes/>
+            </categorytype>
+        </categorytypes>
+        <producttypes>
+            <producttype>
+                <guid>25b0dfe3-ef79-4bd9-81cf-b283bf1b78b8</guid>
+                <name>productTestSingleSkuProductType1</name>
+                <assignedattributes>
+                    <attributekey>productTestAttribute1</attributekey>
+                    <attributekey>productTestAttribute2</attributekey>
+                </assignedattributes>
+                <defaulttaxcode>NONE</defaulttaxcode>
+                <nodiscount>false</nodiscount>
+                <assignedcartitemmodifiergroups>
+                    <code>productTestGroup1</code>
+                    <code>productTestGroup2</code>
+                </assignedcartitemmodifiergroups>
+            </producttype>
+			<producttype>
+				<guid>54333349-7aa0-4eec-b3e5-64216b82dc2b</guid>
+				<name>productTestMultiSkuProductType1</name>
+				<assignedattributes>
+					<attributekey>productTestAttribute1</attributekey>
+					<attributekey>productTestAttribute5</attributekey>
+				</assignedattributes>
+				<defaulttaxcode>NONE</defaulttaxcode>
+				<multisku>
+					<assignedskuoptions>
+						<skuoption>prodTestOption1</skuoption>
+						<skuoption>prodTestOption2</skuoption>
+						<skuoption>prodTestOption3</skuoption>
+					</assignedskuoptions>
+					<assignedattributes>
+						<attributekey>productTestAttribute3</attributekey>
+						<attributekey>productTestAttribute4</attributekey>
+					</assignedattributes>
+				</multisku>
+				<nodiscount>false</nodiscount>
+				<assignedcartitemmodifiergroups>
+					<code>productTestGroup1</code>
+					<code>productTestGroup2</code>
+				</assignedcartitemmodifiergroups>
+			</producttype>
+        </producttypes>
+        <skuoptions>
+            <skuoption>
+                <code>optionTestOption1</code>
+                <name>
+                    <value language="en">optionTestOption1En12345</value>
+                    <value language="fr">optionTestOption1Fr12345</value>
+                </name>
+                <skuoptionvalues>
+                    <skuoptionvalue>
+                        <code>optionTestOption1value1</code>
+                        <name>
+                            <value language="en">optionTestOption1value1En12345</value>
+                            <value language="fr">optionTestOption1value1Fr12345</value>
+                        </name>
+                        <ordering>10</ordering>
+                    </skuoptionvalue>
+                    <skuoptionvalue>
+                        <code>optionTestOption1value2</code>
+                        <name>
+                            <value language="en">optionTestOption1value2En12345</value>
+                            <value language="fr">optionTestOption1value2Fr12345</value>
+                        </name>
+                        <ordering>20</ordering>
+                    </skuoptionvalue>
+                </skuoptionvalues>
+            </skuoption>
+			<skuoption>
+				<code>prodTestOption1</code>
+				<name>
+					<value language="en">prodTestOption1En</value>
+					<value language="fr">prodTestOption1Fr</value>
+				</name>
+				<skuoptionvalues>
+					<skuoptionvalue>
+						<code>prodTestOption1v1</code>
+						<name>
+							<value language="en">prodTestOption1v1En</value>
+							<value language="fr">prodTestOption1v1Fr</value>
+						</name>
+						<ordering>10</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>prodTestOption1v2</code>
+						<name>
+							<value language="en">prodTestOption1v2En</value>
+							<value language="fr">prodTestOption1v2Fr</value>
+						</name>
+						<ordering>20</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>prodTestOption1v3</code>
+						<name>
+							<value language="en">prodTestOption1v3En</value>
+							<value language="fr">prodTestOption1v3Fr</value>
+						</name>
+						<ordering>30</ordering>
+					</skuoptionvalue>
+				</skuoptionvalues>
+			</skuoption>
+			<skuoption>
+				<code>prodTestOption2</code>
+				<name>
+					<value language="en">prodTestOption2En</value>
+					<value language="fr">prodTestOption2Fr</value>
+				</name>
+				<skuoptionvalues>
+					<skuoptionvalue>
+						<code>prodTestOption2v1</code>
+						<name>
+							<value language="en">prodTestOption2v1En</value>
+							<value language="fr">prodTestOption2v1Fr</value>
+						</name>
+						<ordering>10</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>prodTestOption2v2</code>
+						<name>
+							<value language="en">prodTestOption2v2En</value>
+							<value language="fr">prodTestOption2v2Fr</value>
+						</name>
+						<ordering>20</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>prodTestOption2v3</code>
+						<name>
+							<value language="en">prodTestOption2v3En</value>
+							<value language="fr">prodTestOption2v3Fr</value>
+						</name>
+						<ordering>30</ordering>
+					</skuoptionvalue>
+				</skuoptionvalues>
+			</skuoption>
+			<skuoption>
+				<code>prodTestOption3</code>
+				<name>
+					<value language="en">prodTestOption3En</value>
+					<value language="fr">prodTestOption3Fr</value>
+				</name>
+				<skuoptionvalues>
+					<skuoptionvalue>
+						<code>prodTestOption3v1</code>
+						<name>
+							<value language="en">prodTestOption3v1En</value>
+							<value language="fr">prodTestOption3v1Fr</value>
+						</name>
+						<ordering>10</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>prodTestOption3v2</code>
+						<name>
+							<value language="en">prodTestOption3v2En</value>
+							<value language="fr">prodTestOption3v2Fr</value>
+						</name>
+						<ordering>20</ordering>
+					</skuoptionvalue>
+					<skuoptionvalue>
+						<code>prodTestOption3v3</code>
+						<name>
+							<value language="en">prodTestOption3v3En</value>
+							<value language="fr">prodTestOption3v3Fr</value>
+						</name>
+						<ordering>30</ordering>
+					</skuoptionvalue>
+				</skuoptionvalues>
+			</skuoption>
+        </skuoptions>
+        <brands>
+            <brand>
+                <code>brandTestBrand1</code>
+                <name>
+                    <value language="en">brandTestBrand1En12345</value>
+                    <value language="fr">brandTestBrand1Fr12345</value>
+                </name>
+            </brand>
+            <brand>
+                <code>productTestBrand1</code>
+                <name>
+                    <value language="en">productTestBrand1En</value>
+                    <value language="fr">productTestBrand1Fr</value>
+                </name>
+            </brand>
+        </brands>
+    </catalog>
+    <catalog>
+        <code>SyndicationVirtualCatalog</code>
+        <type>virtual</type>
+        <name>Syndication Virtual Catalog</name>
+        <defaultlanguage>en</defaultlanguage>
+    </catalog>
+</catalogs>

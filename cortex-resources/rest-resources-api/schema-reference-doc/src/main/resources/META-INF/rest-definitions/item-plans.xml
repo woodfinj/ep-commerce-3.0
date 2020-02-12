@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+	<family>
+		<name>items</name>
+
+		<plan>
+			<name>lookup-item-by-code</name>
+			<description><![CDATA[Look up an item by item code.]]></description>
+			<step>
+				<description><![CDATA[Lookups to item lookup form.]]></description>
+				<start>lookups.lookups</start>
+				<follow-link>itemlookupform</follow-link>
+				<result>lookup-item-form</result>
+			</step>
+			<step>
+				<description><![CDATA[Submit a lookup for an item.]]></description>
+				<start>lookup-item-form</start>
+				<submit/>
+				<to>lookup-item-form</to>
+				<via-link>itemlookupaction</via-link>
+				<result>item</result>
+			</step>
+		</plan>
+
+		<plan>
+			<name>lookup-batch-items</name>
+			<description><![CDATA[Look up a batch of items with a list of codes.]]></description>
+			<step>
+				<description><![CDATA[Lookups to batch items lookup form.]]></description>
+				<start>lookups.lookups</start>
+				<follow-link>batchitemslookupform</follow-link>
+				<result>batch-items-form</result>
+			</step>
+			<step>
+				<description><![CDATA[Submit a batch lookup for items.]]></description>
+				<start>batch-items-form</start>
+				<submit/>
+				<to>batch-items-form</to>
+				<via-link>batchlookupaction</via-link>
+				<result>batch-items</result>
+			</step>
+		</plan>
+
+		<plan>
+			<name>read-code-for-item</name>
+			<description><![CDATA[Read the code of an item.]]></description>
+			<step>
+				<description><![CDATA[Follow a link from item to code.]]></description>
+				<start>item</start>
+				<follow-link>code</follow-link>
+				<link-back>item</link-back>
+				<result>code-for-item</result>
+			</step>
+		</plan>
+	</family>
+</definitions>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://www.elasticpath.com/schema/rest/0.5">
+
+	<family>
+		<name>lookups</name>
+		<plan>
+			<name>read-lookups</name>
+			<description><![CDATA[Retrieve list of available lookup forms.]]></description>
+			<step>
+				<description><![CDATA[Root to lookups.]]></description>
+				<start>base.root</start>
+				<follow-link>lookups</follow-link>
+				<result>lookups</result>
+			</step>
+		</plan>
+	</family>
+</definitions>
