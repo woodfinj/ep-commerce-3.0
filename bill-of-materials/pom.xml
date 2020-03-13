@@ -93,7 +93,7 @@
 		<org.apache.activemq.version>5.15.8</org.apache.activemq.version>
 		<org.apache.ant.version>1.7.1</org.apache.ant.version>
 		<org.apache.batic.version>1.11</org.apache.batic.version>
-		<org.apache.camel.version>2.23.1</org.apache.camel.version>
+		<org.apache.camel.version>3.1.0</org.apache.camel.version>
 		<org.apache.commons.lang3.version>3.8</org.apache.commons.lang3.version>
 		<org.apache.geronimo.specs.version>1.0.1</org.apache.geronimo.specs.version>
 		<org.apache.openjpa.version>2.4.0-ep2.1</org.apache.openjpa.version>
