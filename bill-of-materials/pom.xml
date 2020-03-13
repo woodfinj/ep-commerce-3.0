@@ -125,7 +125,7 @@
 		<shiro-core.version>1.3.2</shiro-core.version>
 		<sisu.version>0.3.2</sisu.version>
 		<slf4j.version>1.7.25</slf4j.version>
-		<solr.version>7.2.1</solr.version>
+		<solr.version>8.4.1</solr.version>
 
 		<tomcat.version>9.0.16</tomcat.version>
 		<tomcatLogging.version>8.5.2</tomcatLogging.version>
