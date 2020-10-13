@@ -74,7 +74,7 @@
 		<javax.validation.api.version>1.1.0.Final</javax.validation.api.version>
 		<jmock.version>2.8.4</jmock.version>
 		<jregex.version>1.2_01-ep1.0.0</jregex.version>
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<javassist.version>3.24.1-GA</javassist.version>
 		<javax.servlet.version>3.1.0</javax.servlet.version>
 		<javax.security.jacc.version>1.5</javax.security.jacc.version>
