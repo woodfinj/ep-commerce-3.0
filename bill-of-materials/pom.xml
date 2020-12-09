@@ -50,7 +50,7 @@
 		<felix.webconsole.version>4.3.4</felix.webconsole.version>
 
 		<gemini.blueprint.version>2.1.0.RELEASE</gemini.blueprint.version>
-		<groovy.version>2.4.15</groovy.version>
+		<groovy.version>3.0.7</groovy.version>
 		<guava.version>24.1.1-jre</guava.version>
 		<guice.version>4.0</guice.version>
 		<groovy-all.version>2.4.15</groovy-all.version>
