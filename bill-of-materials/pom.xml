@@ -135,7 +135,7 @@
 
 		<xerces.version>2.9.1</xerces.version>
 		<zookeeper.version>3.4.10</zookeeper.version>
-		<org.mybatis.version>3.2.3</org.mybatis.version>
+		<org.mybatis.version>3.5.6</org.mybatis.version>
 		<org.reflections.version>0.9.11</org.reflections.version>
 
 		<mysql-connector-java.version>5.1.44</mysql-connector-java.version>
