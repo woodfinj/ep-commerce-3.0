@@ -17,7 +17,7 @@
 
 	<properties>
 		<aopalliance.version>1.0_5</aopalliance.version>
-		<apache.poi.version>4.0.1</apache.poi.version>
+		<apache.poi.version>4.1.1</apache.poi.version>
 		<api-platform.version>1.38.0.cdc4382051</api-platform.version>
 		<aspectj.rt.version>1.8.9</aspectj.rt.version>
 		<assertj-core.version>3.11.1</assertj-core.version>
